@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fake AWS Form</title>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; background: #f2f2f2; }
+    form { background: white; padding: 2rem; border-radius: 8px; width: 400px; margin: auto; }
+    label, select, button { display: block; margin-top: 1rem; width: 100%; }
+    button { margin-top: 2rem; background: #ccc; cursor: not-allowed; }
+  </style>
+</head>
+<body>
+  <h1 style="text-align: center;">Mock AWS Launch Page</h1>
+  <form>
+    <label for="type">Instance Type:</label>
+    <select id="type">
+      <option disabled selected>Select...</option>
+      <option>t2.micro</option>
+      <option>t3.medium</option>
+    </select>
+
+    <label for="region">Region:</label>
+    <select id="region">
+      <option disabled selected>Select...</option>
+      <option>us-east-1</option>
+      <option>eu-west-1</option>
+    </select>
+
+    <button type="submit" disabled>Launch Instance</button>
+  </form>
+  <p style="text-align: center; margin-top: 2rem;">You seem stuck? That's the demo 😅</p>
+</body>
+</html>
