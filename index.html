@@ -73,7 +73,7 @@
             color: #232f3e;
         }
 
-        .nav-item i {
+        .nav-item .icon {
             margin-right: 10px;
             width: 16px;
         }
@@ -340,8 +340,16 @@
             height: 16px;
             background-size: contain;
             background-repeat: no-repeat;
-            font-style: normal;
-            font-weight: normal;
+            font-style: normal !important;
+            font-weight: normal !important;
+            font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Android Emoji", "EmojiSymbols", "EmojiOne Mozilla", "Twemoji Mozilla", "Segoe UI Symbol", Arial, sans-serif !important;
+            transform: none !important;
+        }
+
+        .icon::before {
+            font-style: normal !important;
+            font-weight: normal !important;
+            transform: none !important;
         }
 
         .icon-users::before { content: "👥"; }
@@ -642,19 +650,19 @@
             <div class="nav-section">
                 <h3>Access Management</h3>
                 <div class="nav-item active">
-                    <i class="icon-users"></i>
+                    <span class="icon icon-users"></span>
                     Users
                 </div>
                 <div class="nav-item">
-                    <i class="icon-groups"></i>
+                    <span class="icon icon-groups"></span>
                     Groups
                 </div>
                 <div class="nav-item">
-                    <i class="icon-roles"></i>
+                    <span class="icon icon-roles"></span>
                     Roles
                 </div>
                 <div class="nav-item">
-                    <i class="icon-policies"></i>
+                    <span class="icon icon-policies"></span>
                     Policies
                 </div>
             </div>
@@ -662,11 +670,11 @@
             <div class="nav-section">
                 <h3>Security</h3>
                 <div class="nav-item">
-                    <i class="icon-keys"></i>
+                    <span class="icon icon-keys"></span>
                     Access Keys
                 </div>
                 <div class="nav-item">
-                    <i class="icon-settings"></i>
+                    <span class="icon icon-settings"></span>
                     Account Settings
                 </div>
             </div>
@@ -695,23 +703,23 @@
                 <!-- Action Buttons -->
                 <div class="action-buttons">
                     <button class="btn btn-primary">
-                        <i class="icon-plus"></i>
+                        <span class="icon icon-plus"></span>
                         Create User
                     </button>
                     <button class="btn btn-secondary">
-                        <i class="icon-upload"></i>
+                        <span class="icon icon-upload"></span>
                         Import Users
                     </button>
                     <button class="btn btn-secondary">
-                        <i class="icon-download"></i>
+                        <span class="icon icon-download"></span>
                         Export Users
                     </button>
                     <button class="btn btn-secondary">
-                        <i class="icon-refresh"></i>
+                        <span class="icon icon-refresh"></span>
                         Refresh
                     </button>
                     <button class="btn btn-danger">
-                        <i class="icon-delete"></i>
+                        <span class="icon icon-delete"></span>
                         Delete Selected
                     </button>
                 </div>
@@ -723,7 +731,7 @@
                         <div class="table-actions">
                             <input type="text" class="search-box" placeholder="Search users...">
                             <button class="btn btn-secondary">
-                                <i class="icon-filter"></i>
+                                <span class="icon icon-filter"></span>
                                 Filter
                             </button>
                         </div>
@@ -831,7 +839,7 @@
             <div class="modal-header">
                 <h2 class="modal-title">Create IAM User</h2>
                 <button class="modal-close" id="closeModal">
-                    <i class="icon-close"></i>
+                    <span class="icon icon-close"></span>
                 </button>
             </div>
             
@@ -846,7 +854,7 @@
                         <h3 class="form-section-title">
                             User Details
                             <button type="button" class="help-trigger" data-help="user-details">
-                                <i class="icon-help"></i>
+                                <span class="icon icon-help"></span>
                             </button>
                         </h3>
                         <div class="help-popup" id="help-user-details">
@@ -858,7 +866,7 @@
                                 <label class="form-label">
                                     Username
                                     <button type="button" class="help-trigger" data-help="username">
-                                        <i class="icon-help"></i>
+                                        <span class="icon icon-help"></span>
                                     </button>
                                 </label>
                                 <input type="text" class="form-input" id="username" required>
