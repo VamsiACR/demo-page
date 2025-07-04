@@ -13,7 +13,7 @@
         :root {
             --main-bg: linear-gradient(135deg, #000000 0%, #190d43 100%);
             --accent-color: #629df6;
-            --accent-gradient: linear-gradient(90deg, #447ffd 0%, #9f4cff 100%);
+            --accent-gradient: linear-gradient(90deg, #4d80ee 0%, #9448ec 100%);
             --text-color: #ffffff;
             --polygon-color: rgba(88, 144, 255, 0.15);
             --polygon-color-2: rgba(88, 144, 255, 0.05);
@@ -134,96 +134,35 @@
         }
 
         .slide-image-container {
-            width: 200px;
-            height: 200px;
+            width: 300px;
+            height: 300px;
             flex-shrink: 0;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
-            border-radius: 12px;
+            border-radius: 24px;
             padding: 0.7em;
             overflow: hidden;
-        }
-
-        .slide-image-container::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: 
-                radial-gradient(circle at 30% 30%, var(--polygon-color) 0%, transparent 50%),
-                radial-gradient(circle at 70% 70%, var(--polygon-color-2) 0%, transparent 50%),
-                radial-gradient(circle at 50% 50%, var(--polygon-color) 0%, transparent 60%);
-            clip-path: polygon(
-                0% 55%,
-                10% 54%,
-                20% 53%,
-                30% 54%,
-                40% 55%,
-                50% 56%,
-                60% 55%,
-                70% 54%,
-                80% 55%,
-                90% 56%,
-                100% 55%,
-                100% 100%,
-                0% 100%
-            );
-            animation: wave 8s ease-in-out infinite;
-            z-index: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.18) 0%, transparent 80%);
         }
 
         .slide-image-container::after {
             content: '';
             position: absolute;
-            inset: 2px;
-            background: radial-gradient(circle at center, 
-                rgba(88, 144, 255, 0.1) 0%,
-                rgba(88, 144, 255, 0.05) 40%,
-                rgba(88, 144, 255, 0.02) 70%,
-                rgba(88, 144, 255, 0) 100%);
-            border-radius: 10px;
+            inset: 0;
+            background: 
+                radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.044) 0%, transparent 60%),
+                radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.046) 0%, transparent 60%),
+                radial-gradient(circle at 40% 60%, rgba(98, 157, 246, 0.033) 0%, transparent 70%),
+                radial-gradient(circle at 60% 40%, rgba(98, 157, 246, 0.049) 0%, transparent 70%),
+                radial-gradient(circle at center, 
+                    rgba(255, 255, 255, 0.114) 0%,
+                    rgba(255, 255, 255, 0.04) 30%,
+                    rgba(255, 255, 255, 0.02) 60%,
+                    rgba(255, 255, 255, 0) 100%);
+            border-radius: 12px;
             z-index: 1;
-        }
-
-        @keyframes wave {
-            0%, 100% {
-                clip-path: polygon(
-                    0% 55%,
-                    10% 54%,
-                    20% 53%,
-                    30% 54%,
-                    40% 55%,
-                    50% 56%,
-                    60% 55%,
-                    70% 54%,
-                    80% 55%,
-                    90% 56%,
-                    100% 55%,
-                    100% 100%,
-                    0% 100%
-                );
-            }
-            50% {
-                clip-path: polygon(
-                    0% 55%,
-                    10% 56%,
-                    20% 57%,
-                    30% 56%,
-                    40% 55%,
-                    50% 54%,
-                    60% 55%,
-                    70% 56%,
-                    80% 55%,
-                    90% 54%,
-                    100% 55%,
-                    100% 100%,
-                    0% 100%
-                );
-            }
         }
 
         .slide-image {
@@ -294,23 +233,18 @@
         <div class="slides">
             <!-- Title Slide -->
             <section class="title-slide">
-                <h1>WebFuse Huddle Mode</h1>
-                <p>Enhancing Collaboration in Web Development</p>
+                <h1>Webfuse Internal Huddles</h1>
             </section>
 
             <!-- What is Huddle Mode -->
             <section>
                 <div class="slide-content">
-                    <div class="slide-image-container">
-                        <img src="./undraw_online-collaboration_xon8.svg" alt="Online Collaboration" class="slide-image">
-                    </div>
+                    <img src="./huddlemode.png" alt="Huddle Mode" style="width: 450px; height: 450px; object-fit: contain;">
                     <div class="slide-text">
                         <h2>What is Huddle Mode in WebFuse?</h2>
                         <ul>
-                            <li>Real-time collaboration feature</li>
-                            <li>Instant code sharing and editing</li>
-                            <li>Live debugging sessions</li>
-                            <li>Team problem-solving environment</li>
+                            <li>Lets everyone work on their own tabs</li>
+                            <li>Follow each other</li>
                         </ul>
                     </div>
                 </div>
@@ -324,11 +258,12 @@
                     </div>
                     <div class="slide-text">
                         <h2>What Problem Does it Solve?</h2>
+                        <p>Vamsi, What problem does it solve????? >.< </p>
                         <ul>
-                            <li>Remote team collaboration challenges</li>
-                            <li>Time-consuming code sharing</li>
-                            <li>Debugging communication gaps</li>
-                            <li>Onboarding new team members</li>
+                            <li>Breakout rooms</li>
+                            <li>Workshops and training</li>
+                            <li>Onboarding</li>
+                            <li>Travel Planning</li>
                         </ul>
                     </div>
                 </div>
@@ -341,29 +276,11 @@
                         <img src="./undraw_engineering-team_13ax.svg" alt="Engineering Team" class="slide-image">
                     </div>
                     <div class="slide-text">
-                        <h2>Huddle Mode Without WebFuse</h2>
+                        <h2>Huddle Mode Without Webfuse and limitations</h2>
                         <ul>
-                            <li>Screen sharing tools</li>
-                            <li>Code review platforms</li>
-                            <li>Video conferencing</li>
-                            <li>Chat applications</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Limitations -->
-            <section>
-                <div class="slide-content">
-                    <div class="slide-image-container">
-                        <img src="./undraw_creation_4036.svg" alt="Creation Process" class="slide-image">
-                    </div>
-                    <div class="slide-text">
-                        <h2>Limitations of Current Solutions</h2>
-                        <ul>
-                            <li>High latency in screen sharing</li>
+                            <li>No way to have parallel workspaces in a single online session</li>
+                            <li>Screen sharing doesn't provide a great quality</li>
                             <li>Limited real-time interaction</li>
-                            <li>Poor code visibility</li>
                             <li>Complex setup requirements</li>
                         </ul>
                     </div>
@@ -372,24 +289,20 @@
 
             <!-- WebFuse Solution -->
             <section>
-                <h2>Enter WebFuse</h2>
-                <ul>
-                    <li>Seamless integration</li>
-                    <li>Real-time collaboration</li>
-                    <li>Built-in code editor</li>
-                    <li>Instant deployment</li>
-                </ul>
-            </section>
-
-            <!-- ICP -->
-            <section>
-                <h2>Ideal Customer Profile</h2>
-                <ul>
-                    <li>Remote development teams</li>
-                    <li>Startups and small businesses</li>
-                    <li>Educational institutions</li>
-                    <li>Open source projects</li>
-                </ul>
+                <div class="slide-content">
+                    <div class="slide-image-container">
+                        <img src="./undraw_creation_4036.svg" alt="Creation" class="slide-image">
+                    </div>
+                    <div class="slide-text">
+                        <h2>Enter WebFuse</h2>
+                        <ul>
+                            <li>Seamless integration</li>
+                            <li>Real-time collaboration</li>
+                            <li>Fully customizable</li>
+                            <li>Instant deployment</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
 
             <!-- Demo -->
@@ -400,26 +313,61 @@
                 </video>
             </section>
 
+            <!-- ICP -->
+            <section>
+                <div class="slide-content">
+                    <div class="slide-image-container">
+                        <img src="./undraw_educator_6dgp.svg" alt="Educator" class="slide-image">
+                    </div>
+                    <div class="slide-text">
+                        <h2>Ideal Customer Profile</h2>
+                        <ul>
+                            <li>Workshop instructors</li>
+                            <li>Training companies or Onboarding companies</li>
+                            <li>Travel companies</li>
+                            <li>Educational institutions</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
             <!-- Awareness Plan -->
             <section>
-                <h2>Awareness Plan</h2>
-                <ul>
-                    <li>Developer community outreach</li>
-                    <li>Technical blog posts</li>
-                    <li>Social media presence</li>
-                    <li>Conference presentations</li>
-                </ul>
+                <div class="slide-content">
+                    <div class="slide-image-container">
+                        <img src="./undraw_drink-coffee_q0ey.svg" alt="Drink Coffee" class="slide-image">
+                    </div>
+                    <div class="slide-text">
+                        <h2>Awareness Plan</h2>
+                        <ul>
+                            <li>Workshop communities outreach</li>
+                            <li>Medium article - How I managed to make my cloud workshop more interactive with a single tool</li>
+                            <li>Reddit</li>
+                            <li>....and more</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
 
             <!-- Learnings -->
             <section>
                 <h2>Key Learnings</h2>
                 <ul>
-                    <li>User feedback insights</li>
-                    <li>Performance improvements</li>
-                    <li>Feature prioritization</li>
-                    <li>Future roadmap</li>
+                    <li>Stabilize the feature. Page refreshes sometimes blurs the tabs</li>
+                    <li>Add a start option for the huddle mode</li>
+                    <li>Remove (beta) for Presenter Mode (Huddle mode needs it)</li>
+                    <li>Privacy modes to not let others follow your tabs</li>
                 </ul>
+            </section>
+
+            <section>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <img src="./cat.png" alt="Cat" style="max-width: 220px; height: auto; margin-bottom: 1em; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.18);">
+                    <h2>Sankyu very mach</h2>
+                    <ul>
+                        <li>Please ask me any questions........... :)</li>
+                    </ul>
+                </div>
             </section>
         </div>
     </div>
